@@ -1,0 +1,4 @@
+#!/bin/bash
+echo "val original_times = ["
+cat $1 | grep "Building directory src" | sed 's/.*Building directory src\/\(.*\) \[.*, \(.*\)\]/  ("\1", "\2"),/'
+echo "(\"rest\", \"23:59:59\")]"
